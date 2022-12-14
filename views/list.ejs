@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Főoldal</title>
+</head>
+<body>
+  
+  <form method="post">
+
+    <input placeholder="Szem szín kereső" required type="text" name="szemszin">
+    <input  type="submit" value="Keresés">
+  </form>
+  <hr>
+
+  <table>
+
+    <tr>
+      <td><b>Szem szín</b></td>
+      <td><b>Súly</b></td>
+
+    </tr>
+
+    <% for (let p of macskak) { %>
+        <tr>
+          <td><%=p.szem_szin%></td> 
+            <td><%=p.suly%></td> 
+        </tr>
+    <% } %>
+  </table>
+
+  <hr>
+  <p>
+  <a href="cats/new">Új macska hozzáadása</a>
+  </p>
+
+</body>
+</html>
